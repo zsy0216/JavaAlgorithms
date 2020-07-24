@@ -1,18 +1,18 @@
-# JavaAlgorithms Java 算法
+# Java Algorithms
 
-> 参考：
->
-> [TheAlgorithms&Java](https://github.com/TheAlgorithms/Java) 
->
-> 《算法》 第四版 Robert Sedgewick & Kevin Wayne 著 谢路云 译
+Read in [Chinese](https://github.com/zsy0216/JavaAlgorithms/blob/master/README_ch.md)
 
-## TODO
-查找
+Reference ：
 
-- [x] 二分查找
+- [TheAlgorithms&Java](https://github.com/TheAlgorithms/Java) 
 
- 数学
- - [ ] 最大公约数
- - [ ] 最小公倍数
- 
- 排序
+-  Robert Sedgewick. & Kevin Wayne. _Algorithms_ Fourth Edition
+
+# Algorithms List
+See [list](https://github.com/zsy0216/JavaAlgorithms/blob/master/LIST.md). 
+
+# Questions
+Go [issues](https://github.com/zsy0216/JavaAlgorithms/issues/new). 
+
+# Contact
+![WeChat](https://gitee.com/Ep_tassel/typora-image/raw/master/typora/e906d660515ab1324c18c41bf93a2a7.jpg)
