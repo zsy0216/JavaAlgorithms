@@ -1,7 +1,5 @@
 package com.tassel.sort;
 
-import java.util.logging.Logger;
-
 /**
  * @author shuaiyin.zhang
  * @description 排序算法类的模板(算法 第四版)
