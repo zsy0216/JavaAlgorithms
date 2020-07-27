@@ -1,6 +1,7 @@
 package com.tassel.search;
 
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 /**
  * @author shuaiyin.zhang
@@ -12,6 +13,8 @@ public class BinarySearch {
 	 * 本例来自 《算法》第四版 1.1.10
 	 * 数组必须是有序的
 	 */
+	private static final Logger logger = Logger.getLogger("BinarySearch");
+
 	public static int rank(int target, int[] a) {
 		int lo = 0;
 		int hi = a.length - 1;
@@ -42,9 +45,9 @@ public class BinarySearch {
 		Arrays.sort(a);
 		int t = rank(target, a);
 		if (t == -1) {
-			System.out.println(target + " 不在数组内. ");
+			logger.info(target + " 不在数组内. ");
 		} else {
-			System.out.println(target + " 在数组索引为 " + t + " 的位置. ");
+			logger.info(target + " 在数组索引为 " + t + " 的位置. ");
 		}
 	}
 }

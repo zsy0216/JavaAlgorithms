@@ -1,11 +1,14 @@
 package com.tassel.sort;
 
+import java.util.logging.Logger;
+
 /**
  * @author shuaiyin.zhang
  * @description 排序算法类的模板(算法 第四版)
  * @date 2020/07/27
  */
 public class Example {
+	private static final Logger logger = Logger.getLogger("Example");
 	/**
 	 * 一些排序算法的实现
 	 */
@@ -31,9 +34,9 @@ public class Example {
 
 	private static void show(Comparable[] a) {
 		for (int i = 0; i < a.length; i++) {
-			System.out.print(a[i] + " ");
+			logger.info(a[i] + " ");
 		}
-		System.out.println();
+		logger.info("/n");
 	}
 
 	public static boolean isSorted(Comparable[] a) {
@@ -49,6 +52,7 @@ public class Example {
 		String[] a = new String[]{"sad", "blue", "happy", "yellow"};
 		sort(a);
 		assert isSorted(a);
+		exch(a, 2, 3);
 		show(a);
 	}
 }
