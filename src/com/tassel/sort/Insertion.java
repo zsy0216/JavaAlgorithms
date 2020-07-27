@@ -6,6 +6,10 @@ package com.tassel.sort;
  * @date 2020/07/27
  */
 public class Insertion implements Example {
+	/**
+	 * 插入排序对部分有序的数组更加有效
+	 */
+
 	@Override
 	public void sort(Comparable[] a) {
 		// 将 a[] 按升序排列
