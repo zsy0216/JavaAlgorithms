@@ -7,39 +7,57 @@ import java.util.logging.Logger;
  * @description 排序算法类的模板(算法 第四版)
  * @date 2020/07/27
  */
-public class Example {
-	private static final Logger logger = Logger.getLogger("Example");
+public interface Example {
 	/**
 	 * 一些排序算法的实现
+	 *
+	 * @param a 需要排序的数组
 	 */
-	public static void sort(Comparable[] a) {
-		// some implements
-	}
+	void sort(Comparable[] a);
 
 	/**
 	 * 对元素进行比较
+	 *
+	 * @param v 元素
+	 * @param w 元素
+	 * @return 比较结果布尔值
 	 */
-	private static boolean less(Comparable v, Comparable w) {
+	default boolean less(Comparable v, Comparable w) {
 		return v.compareTo(w) < 0;
 	}
 
 	/**
 	 * 将元素交换位置
+	 *
+	 * @param a 数组
+	 * @param i 交换索引
+	 * @param j 交换索引
 	 */
-	private static void exch(Comparable[] a, int i, int j) {
+	default void exchange(Comparable[] a, int i, int j) {
 		Comparable t = a[i];
 		a[i] = a[j];
 		a[j] = t;
 	}
 
-	private static void show(Comparable[] a) {
+	/**
+	 * 单行输出
+	 *
+	 * @param a 需要输出的数组
+	 */
+	default void show(Comparable[] a) {
 		for (int i = 0; i < a.length; i++) {
-			logger.info(a[i] + " ");
+			System.out.print(a[i] + " ");
 		}
-		logger.info("/n");
+		System.out.println();
 	}
 
-	public static boolean isSorted(Comparable[] a) {
+	/**
+	 * 判断数组是否有序
+	 *
+	 * @param a 需要判断的数组
+	 * @return 是否有序 ? true : false
+	 */
+	default boolean isSorted(Comparable[] a) {
 		for (int i = 1; i < a.length; i++) {
 			if (less(a[i], a[i - 1])) {
 				return false;
@@ -48,11 +66,11 @@ public class Example {
 		return true;
 	}
 
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		String[] a = new String[]{"sad", "blue", "happy", "yellow"};
 		sort(a);
 		assert isSorted(a);
-		exch(a, 2, 3);
+		exchange(a, 2, 3);
 		show(a);
-	}
+	}*/
 }
