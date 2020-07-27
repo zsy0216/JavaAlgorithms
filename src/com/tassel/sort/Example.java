@@ -63,12 +63,4 @@ public interface Example {
 		}
 		return true;
 	}
-
-/*	public static void main(String[] args) {
-		String[] a = new String[]{"sad", "blue", "happy", "yellow"};
-		sort(a);
-		assert isSorted(a);
-		exchange(a, 2, 3);
-		show(a);
-	}*/
 }

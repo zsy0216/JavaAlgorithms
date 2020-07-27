@@ -23,7 +23,7 @@ public class Selection implements Example {
 
 	public static void main(String[] args) {
 		Selection selection = new Selection();
-		String[] a = new String[]{"sad", "blue", "happy", "yellow"};
+		String[] a = new String[]{"sad", "blue", "happy", "yellow", "passion", "red"};
 		selection.sort(a);
 		assert selection.isSorted(a);
 		selection.show(a);
