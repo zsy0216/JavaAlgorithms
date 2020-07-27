@@ -3,7 +3,7 @@
 ## 排序
 
  - [ ] [选择排序](https://github.com/zsy0216/JavaAlgorithms/blob/master/src/com/tassel/sort/Selection.java)
- - [ ] 插入排序
+ - [ ] [插入排序](https://github.com/zsy0216/JavaAlgorithms/blob/master/src/com/tassel/sort/Insertion.java)
  - [ ] 快速排序
  - [ ] 
 
