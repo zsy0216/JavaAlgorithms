@@ -15,4 +15,4 @@ Read in [English](/README.md)
 前往 [issues](https://github.com/zsy0216/JavaAlgorithms/issues/new). 
 
 # 联系我
-![WeChat](https://gitee.com/Ep_tassel/typora-image/raw/master/typora/e906d660515ab1324c18c41bf93a2a7.jpg)
+![WeChat](https://gitee.com/zsy0216/typora-image/raw/master/typora/e906d660515ab1324c18c41bf93a2a7.jpg)
