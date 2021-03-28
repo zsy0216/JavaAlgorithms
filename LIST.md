@@ -12,15 +12,15 @@
 
 ## 排序
 
- - [x] [选择排序](/src/com/zsy/sort/Selection.java)
- - [x] [插入排序](/src/com/zsy/sort/Insertion.java)
- - [x] [希尔排序](/src/com/zsy/sort/Shell.java)
+ - [x] [选择排序](/src/com/zsy/algorithms/sort/Selection.java)
+ - [x] [插入排序](/src/com/zsy/algorithms/sort/Insertion.java)
+ - [x] [希尔排序](/src/com/zsy/algorithms/sort/Shell.java)
  - [ ] 快速排序
  - [ ] 
 
 ## 查找
 
-- [x] [二分查找](/src/com/zsy/search/BinarySearch.java)
+- [x] [二分查找](/src/com/zsy/algorithms/search/BinarySearch.java)
 - [ ] 
 
 ## 数学
