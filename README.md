@@ -1,6 +1,6 @@
 # Java Algorithms
 
-Read in [Chinese](https://github.com/zsy0216/JavaAlgorithms/blob/master/README_ch.md)
+Read in [Chinese](/README_ch.md)
 
 Reference ：
 
@@ -9,7 +9,7 @@ Reference ：
 -  Robert Sedgewick. & Kevin Wayne. _Algorithms_ Fourth Edition
 
 # Algorithms List
-See [list](https://github.com/zsy0216/JavaAlgorithms/blob/master/LIST.md). 
+See [list](/LIST.md). 
 
 # Questions
 Go [issues](https://github.com/zsy0216/JavaAlgorithms/issues/new). 
