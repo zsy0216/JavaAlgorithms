@@ -1,4 +1,4 @@
-package com.zsy.sort;
+package com.zsy.algorithms.sort;
 
 /**
  * @author shuaiyin.zhang

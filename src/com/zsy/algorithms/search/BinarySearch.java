@@ -1,4 +1,4 @@
-package com.zsy.search;
+package com.zsy.algorithms.search;
 
 import java.util.Arrays;
 import java.util.logging.Logger;
