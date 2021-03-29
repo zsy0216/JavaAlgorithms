@@ -23,6 +23,18 @@ public class SingleLinkedListTest {
         System.out.println("-----------------根据编号修改节点信息：---------------------");
         HeroNode newNode = new HeroNode(2, "Lu JunYi", "Yu QiLin");
         testUpdate(newNode);
+
+        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        testDelete(1);
+        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        testDelete(4);
+        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        testDelete(2);
+    }
+
+    private static void testDelete(int no) {
+        linkedList.delete(no);
+        linkedList.list();
     }
 
     private static void testUpdate(HeroNode newNode) {

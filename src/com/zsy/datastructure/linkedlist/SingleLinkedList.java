@@ -63,6 +63,21 @@ public class SingleLinkedList {
     }
 
     /**
+     * @param no 根据编号 no 删除链表中对应的节点
+     */
+    public void delete(int no) {
+        HeroNode temp = head;
+        while (temp.next != null) {
+            if (temp.next.no == no) {
+                temp.next = temp.next.next;
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.printf("没有找到编号是 %d 的节点，不能修改\n", no);
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {
