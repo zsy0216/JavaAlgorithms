@@ -1,6 +1,8 @@
 package com.zsy.datastructure.linkedlist;
 
 /**
+ * 以水浒英雄信息作为链表的节点
+ *
  * @author zhangshuaiyin
  */
 public class HeroNode {
@@ -18,20 +20,11 @@ public class HeroNode {
 
     @Override
     public String toString() {
-        if (next == null) {
-            return "HeroNode{" +
-                    "no=" + no +
-                    ", name='" + name + '\'' +
-                    ", nickName='" + nickName + '\'' +
-                    ", next=" + next +
-                    '}';
-        } else {
-            return "HeroNode{" +
-                    "no=" + no +
-                    ", name='" + name + '\'' +
-                    ", nickName='" + nickName + '\'' +
-                    '}';
+        return "HeroNode{" +
+                "no=" + no +
+                ", name='" + name + '\'' +
+                ", nickName='" + nickName + '\'' +
+                '}';
 
-        }
     }
 }
