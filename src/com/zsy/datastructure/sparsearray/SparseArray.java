@@ -1,5 +1,7 @@
 package com.zsy.datastructure.sparsearray;
 
+import java.io.*;
+
 /**
  * 使用稀疏数组，来保存二维数组棋盘(11*11)
  * 把稀疏数组存盘，并且可以重新恢复原来的二维数组数组
@@ -139,6 +141,56 @@ public class SparseArray {
                     sparseArray[line][2] = chessArray[i][j];
                 }
             }
+        }
+    }
+
+    /**
+     * 把稀疏数组保存到文件中
+     *
+     * @param sparseArray 稀疏数组
+     */
+    public static void sparseToFile(int[][] sparseArray) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("map.data"))) {
+            for (
+                    int[] rows : sparseArray) {
+                for (int item : rows) {
+                    writer.write(item + "");
+                    writer.write("\t");
+                }
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 从文件中读取到稀疏数组
+     *
+     * @return sparseArray 稀疏数组
+     */
+    public static int[][] fileToSparse() {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader("map.data"));
+            int count = (int) reader.lines().count();
+
+            reader = new BufferedReader(new FileReader("map.data"));
+            int[][] sparseArray = new int[count][3];
+            String tempString;
+            int num = 0;
+            while ((tempString = reader.readLine()) != null) {
+                String[] split = tempString.split("\t");
+                sparseArray[num][0] = Integer.parseInt(split[0]);
+                sparseArray[num][1] = Integer.parseInt(split[1]);
+                sparseArray[num][2] = Integer.parseInt(split[2]);
+                num ++;
+            }
+            return sparseArray;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new int[0][];
         }
     }
 }
