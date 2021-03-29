@@ -24,6 +24,27 @@ public class SingleLinkedList {
     }
 
     /**
+     * 按照编号由小到大的顺序插入节点，编号不可重复
+     *
+     * @param node 插入节点
+     */
+    public void addByOrder(HeroNode node) {
+        HeroNode temp = head;
+        while (temp.next != null) {
+            if (temp.next.no == node.no) {
+                System.out.printf("编号 %d 已存在，插入失败\n", node.no);
+                return;
+            } else if (temp.next.no > node.no) {
+                // 此时说明新节点应该插入 temp 的下一个位置
+                break;
+            }
+            temp = temp.next;
+        }
+        node.next = temp.next;
+        temp.next = node;
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {

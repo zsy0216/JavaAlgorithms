@@ -14,6 +14,20 @@ public class SingleLinkedListTest {
     public static void main(String[] args) {
         SingleLinkedList linkedList = new SingleLinkedList();
         testAdd(linkedList);
+
+        System.out.println("--------------------------------------------------");
+
+        linkedList = new SingleLinkedList();
+        testAddByOrder(linkedList);
+    }
+
+    private static void testAddByOrder(SingleLinkedList linkedList) {
+        linkedList.addByOrder(hero4);
+        linkedList.addByOrder(hero4);
+        linkedList.addByOrder(hero2);
+        linkedList.addByOrder(hero3);
+        linkedList.addByOrder(hero1);
+        linkedList.list();
     }
 
     /**
