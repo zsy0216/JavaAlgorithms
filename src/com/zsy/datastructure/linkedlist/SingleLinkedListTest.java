@@ -11,14 +11,23 @@ public class SingleLinkedListTest {
     static HeroNode hero3 = new HeroNode(3, "吴用", "智多星");
     static HeroNode hero4 = new HeroNode(4, "林冲", "豹子头");
 
+    static SingleLinkedList linkedList = new SingleLinkedList();
+
     public static void main(String[] args) {
-        SingleLinkedList linkedList = new SingleLinkedList();
         testAdd(linkedList);
 
-        System.out.println("--------------------------------------------------");
-
+        System.out.println("-----------------按编号大小插入节点：---------------------");
         linkedList = new SingleLinkedList();
         testAddByOrder(linkedList);
+
+        System.out.println("-----------------根据编号修改节点信息：---------------------");
+        HeroNode newNode = new HeroNode(2, "Lu JunYi", "Yu QiLin");
+        testUpdate(newNode);
+    }
+
+    private static void testUpdate(HeroNode newNode) {
+        linkedList.update(newNode);
+        linkedList.list();
     }
 
     private static void testAddByOrder(SingleLinkedList linkedList) {

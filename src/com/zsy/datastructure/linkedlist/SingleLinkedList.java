@@ -45,6 +45,24 @@ public class SingleLinkedList {
     }
 
     /**
+     * 根据新节点信息修改链表中相同编号的节点
+     *
+     * @param node 新节点
+     */
+    public void update(HeroNode node) {
+        HeroNode temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+            if (temp.no == node.no) {
+                temp.name = node.name;
+                temp.nickName = node.nickName;
+                return;
+            }
+        }
+        System.out.printf("没有找到编号是 %d 的节点，不能修改\n", node.no);
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {
