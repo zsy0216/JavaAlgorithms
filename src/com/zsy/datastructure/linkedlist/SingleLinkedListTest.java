@@ -21,6 +21,7 @@ public class SingleLinkedListTest {
         testAddByOrder(linkedList);
 
         testGetLength();
+        testGetLastIndexNode(2);
 
         System.out.println("-----------------根据编号修改节点信息后链表信息：---------------------");
         HeroNode newNode = new HeroNode(2, "Lu JunYi", "Yu QiLin");
@@ -46,8 +47,12 @@ public class SingleLinkedListTest {
         linkedList.list();
     }
 
-    private static void testGetLength(){
+    private static void testGetLength() {
         System.out.println("单链表有效节点个数：" + linkedList.getLength());
+    }
+
+    private static void testGetLastIndexNode(int k) {
+        System.out.println("倒数第" + k + "个节点为：" + linkedList.getLastIndexNode(k));
     }
 
     /**

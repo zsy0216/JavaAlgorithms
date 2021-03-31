@@ -93,6 +93,27 @@ public class SingleLinkedList {
     }
 
     /**
+     * 查找单链表中的倒数第 k 个结点
+     *
+     * @param k 倒数第 k 个
+     * @return 找得到返回节点对象，找不到返回 null
+     */
+    public HeroNode getLastIndexNode(int k) {
+        HeroNode temp = head;
+        int size = getLength();
+        // 空链表返回空
+        if (temp.next == null || k > size || k <= 0) {
+            return null;
+        }
+        // 比如 size = 3; k = 2; i =1 找第二个(下标是1)
+        temp = temp.next;
+        for (int i = 0; i < size - k; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {
