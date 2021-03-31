@@ -16,32 +16,53 @@ public class SingleLinkedListTest {
     public static void main(String[] args) {
         testAdd(linkedList);
 
-        System.out.println("-----------------按编号大小插入节点：---------------------");
+        System.out.println("-----------------按编号大小插入节点后链表信息：---------------------");
         linkedList = new SingleLinkedList();
         testAddByOrder(linkedList);
 
-        System.out.println("-----------------根据编号修改节点信息：---------------------");
+        testGetLength();
+
+        System.out.println("-----------------根据编号修改节点信息后链表信息：---------------------");
         HeroNode newNode = new HeroNode(2, "Lu JunYi", "Yu QiLin");
         testUpdate(newNode);
+        testGetLength();
 
-        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        System.out.println("-----------------根据编号删除节点信息后链表信息：---------------------");
         testDelete(1);
-        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        testGetLength();
+        System.out.println("-----------------根据编号删除节点信息后链表信息：---------------------");
         testDelete(4);
-        System.out.println("-----------------根据编号删除节点信息：---------------------");
+        testGetLength();
+        System.out.println("-----------------根据编号删除节点信息后链表信息：---------------------");
         testDelete(2);
+        testGetLength();
     }
 
+    /**
+     * @param no 删除编号为 no 的节点
+     */
     private static void testDelete(int no) {
         linkedList.delete(no);
         linkedList.list();
     }
 
+    private static void testGetLength(){
+        System.out.println("单链表有效节点个数：" + linkedList.getLength());
+    }
+
+    /**
+     * @param newNode 更新新节点
+     */
     private static void testUpdate(HeroNode newNode) {
         linkedList.update(newNode);
         linkedList.list();
     }
 
+    /**
+     * 测试按编号大小添加元素
+     *
+     * @param linkedList 单链表
+     */
     private static void testAddByOrder(SingleLinkedList linkedList) {
         linkedList.addByOrder(hero4);
         linkedList.addByOrder(hero4);

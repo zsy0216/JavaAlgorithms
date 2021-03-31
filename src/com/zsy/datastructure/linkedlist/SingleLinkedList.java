@@ -78,6 +78,21 @@ public class SingleLinkedList {
     }
 
     /**
+     * 获取单链表有效节点个数
+     *
+     * @return 有效节点数
+     */
+    public int getLength() {
+        HeroNode temp = head;
+        int length = 0;
+        while (temp.next != null) {
+            length++;
+            temp = temp.next;
+        }
+        return length;
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {
