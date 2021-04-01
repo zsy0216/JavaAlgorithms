@@ -114,6 +114,41 @@ public class SingleLinkedList {
     }
 
     /**
+     * 单链表的反转
+     * 1. 创建一个新的头节点用于保存反转后的链表
+     * 2. 遍历原来的链表，依次取出元素放置新头节点的后面
+     */
+    public void reverse() {
+        if (head.next == null || head.next.next == null) {
+            return;
+        }
+
+        // 反转后链表头节点
+        HeroNode revereHead = new HeroNode(0, "", "");
+
+        // 遍历用辅助节点
+        HeroNode temp = head.next;
+
+        // 取出节点的下一个节点，保存遍历指针
+        HeroNode next = null;
+        while (temp != null) {
+            // 标记下一个元素，此时temp节点就是取出的节点
+            next = temp.next;
+
+            // 将反转链表节点放到取出的节点后面
+            temp.next = revereHead.next;
+
+            // 将取出的节点（包含反转链表的节点）放到反转链表第一个位置
+            revereHead.next = temp;
+
+            // 辅助节点后移
+            temp = next;
+        }
+
+        head.next = revereHead.next;
+    }
+
+    /**
      * 打印链表信息
      */
     public void list() {

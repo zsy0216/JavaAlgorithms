@@ -23,7 +23,10 @@ public class SingleLinkedListTest {
         testGetLength();
         testGetLastIndexNode(2);
 
-        System.out.println("-----------------根据编号修改节点信息后链表信息：---------------------");
+        System.out.println("-----------------反转后链表信息：---------------------");
+        testReverse();
+
+        /*System.out.println("-----------------根据编号修改节点信息后链表信息：---------------------");
         HeroNode newNode = new HeroNode(2, "Lu JunYi", "Yu QiLin");
         testUpdate(newNode);
         testGetLength();
@@ -36,7 +39,7 @@ public class SingleLinkedListTest {
         testGetLength();
         System.out.println("-----------------根据编号删除节点信息后链表信息：---------------------");
         testDelete(2);
-        testGetLength();
+        testGetLength();*/
     }
 
     /**
@@ -53,6 +56,11 @@ public class SingleLinkedListTest {
 
     private static void testGetLastIndexNode(int k) {
         System.out.println("倒数第" + k + "个节点为：" + linkedList.getLastIndexNode(k));
+    }
+
+    private static void testReverse() {
+        linkedList.reverse();
+        linkedList.list();
     }
 
     /**
