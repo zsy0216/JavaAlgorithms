@@ -20,6 +20,9 @@ public class SingleLinkedListTest {
         linkedList = new SingleLinkedList();
         testAddByOrder(linkedList);
 
+        System.out.println("-----------------逆序打印链表信息(不改变链表结构)：---------------------");
+        testReverseList();
+
         testGetLength();
         testGetLastIndexNode(2);
 
@@ -61,6 +64,10 @@ public class SingleLinkedListTest {
     private static void testReverse() {
         linkedList.reverse();
         linkedList.list();
+    }
+
+    public static void testReverseList() {
+        linkedList.reverseList();
     }
 
     /**

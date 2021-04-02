@@ -1,5 +1,7 @@
 package com.zsy.datastructure.linkedlist;
 
+import java.util.Stack;
+
 /**
  * 单链表存储水浒英雄节点信息
  *
@@ -146,6 +148,24 @@ public class SingleLinkedList {
         }
 
         head.next = revereHead.next;
+    }
+
+    /**
+     * 逆序打印链表信息(栈)
+     */
+    public void reverseList() {
+        if (head.next == null) {
+            throw new RuntimeException("当前链表为空");
+        }
+        HeroNode temp = head.next;
+        Stack<HeroNode> stack = new Stack<>();
+        while (temp != null) {
+            stack.push(temp);
+            temp = temp.next;
+        }
+        while (stack.size() > 0) {
+            System.out.println(stack.pop());
+        }
     }
 
     /**
