@@ -151,6 +151,51 @@ public class SingleLinkedList {
     }
 
     /**
+     * 合并两个有序的单链表，合并之后的链表依然有序
+     *
+     * @param linkedList 要合并的单链表
+     */
+    public void mergeWithOrder(SingleLinkedList linkedList) {
+        HeroNode otherHead = linkedList.head;
+        if (head.next == null && otherHead.next == null) {
+            throw new RuntimeException("要合并的两个链表为空~");
+        } else if (head.next == null) {
+            head.next = otherHead.next;
+        } else if (otherHead.next == null) {
+            return;
+        }
+
+        // 保存合并后链表的头节点
+        HeroNode node = new HeroNode(0, "", "");
+        HeroNode temp0 = node;
+
+        HeroNode temp1 = head.next;
+        HeroNode temp2 = otherHead.next;
+
+        // 同时遍历两个有序单链表
+        while (temp1 != null && temp2 != null) {
+            // 遍历两个链表，比较编号大小，比较小的放到合并链表的最后
+            if (temp1.no < temp2.no) {
+                temp0.next = temp1;
+                temp1 = temp1.next;
+            } else {
+                temp0.next = temp2;
+                temp2 = temp2.next;
+            }
+            // 合并后链表的辅助节点后移
+            temp0 = temp0.next;
+        }
+        // 当有链表遍历结束，直接将另一个链表剩余的数据放到最后
+        if (temp1 == null) {
+            temp0.next = temp2;
+        }
+        if (temp2 == null) {
+            temp0.next = temp1;
+        }
+        head.next = node.next;
+    }
+
+    /**
      * 逆序打印链表信息(栈)
      */
     public void reverseList() {
